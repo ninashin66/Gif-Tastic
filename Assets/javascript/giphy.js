@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).on("load", function() {
   var topic = [
     "dog",
     "cat",
@@ -38,7 +38,6 @@ $(document).ready(function() {
 
   $("button").on("click", function() {
     // console.log(topic);
-
     var query = $(this).attr("id");
     console.log(query);
 
@@ -57,7 +56,7 @@ $(document).ready(function() {
 
         for (var i = 0; i < results.length; i++) {
           // Creating and storing a div tag
-          var animalDiv = $("<div>");
+          var animalDiv = $("<div class='animal-giphy'>");
           // Creating a paragraph tag with the result item's rating
           var rating = $("<p id='rating'>").text(
             "Rating: " + results[i].rating
@@ -74,7 +73,6 @@ $(document).ready(function() {
           animalImage.attr("data-state", "still");
           animalImage.attr("class", "gif");
           animalImage.attr("onclick", playGif());
-
           animalDiv.append(animalImage);
           animalDiv.append(rating);
 

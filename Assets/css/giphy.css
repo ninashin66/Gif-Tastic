@@ -1,0 +1,56 @@
+body {
+}
+
+.jumbotron {
+  background-color: black;
+  color: #20ff83;
+}
+
+.lead {
+  border-bottom: #9d20ff solid;
+  margin: 0px;
+}
+.animals {
+  background-color: #20e0ff;
+  border: 5px solid;
+  border-color: #9d20ff;
+  color: #9d20ff;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+#search {
+  border: 5px solid #fcef93;
+}
+
+#search-button {
+  background-color: #fcef93;
+  border: 5px solid #fc5c5e;
+  color: #fc5c5e;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.animal-giphy {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  border: 5px solid #fcef93;
+  width: 50%;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gif {
+  width: 80%;
+}
+#rating {
+  text-align: center;
+  color: #fcef93;
+  font-weight: bold;
+  margin-top: 10px;
+}

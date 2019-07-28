@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Giftastic</title>
-
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="Assets/css/giphy.css" />
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -15,11 +20,14 @@
     <script src="Assets/javascript/giphy.js"></script>
   </head>
   <body>
-    <h1>Giphy This!</h1>
-    <div id="buttons"></div>
-
-    <input type="text" id="search" placeholder="i.e. dog" />
-    <input id="search-button" type="submit" value="Search!" />
+    <div class="jumbotron">
+      <h1 class="display-4">Gif-Tastic!</h1>
+      <p class="lead">Search for your favorite Animal!</p>
+      <hr class="my-4" />
+      <div id="buttons"></div>
+      <input type="text" id="search" placeholder="i.e. dog" />
+      <input id="search-button" type="submit" value="Search!" />
+    </div>
 
     <div id="giphy"></div>
   </body>
