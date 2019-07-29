@@ -23,22 +23,27 @@ $(window).on("load", function() {
   }
   createButtons();
 
+  $("#search").keypress(function(event) {
+    if (event.keyCode === 13) {
+      $("#search-button").click();
+    }
+  });
   $("#search-button").on("click", function() {
     var input = $("#search")
       .val()
       .trim();
     topic.push(input);
-
-    var addButton = $("<button>");
-    addButton.addClass("animals");
-    addButton.attr("id", input);
-    addButton.text(input);
-    $("#buttons").append(addButton);
+    var animalButton = $("<button>");
+    animalButton.addClass("animals");
+    animalButton.attr("id", input);
+    animalButton.text(input);
+    $("#buttons").append(animalButton);
+    $("#search").val("");
   });
 
-  $("button").on("click", function() {
-    // console.log(topic);
-    var query = $(this).attr("id");
+  $("body").on("click", "button", function(event) {
+    event.preventDefault();
+    var query = $(this).text();
     console.log(query);
 
     var queryURL =
@@ -72,12 +77,12 @@ $(window).on("load", function() {
           animalImage.attr("data-animate", results[i].images.fixed_height.url);
           animalImage.attr("data-state", "still");
           animalImage.attr("class", "gif");
-          animalImage.attr("onclick", playGif());
           animalDiv.append(animalImage);
           animalDiv.append(rating);
 
           $("#giphy").append(animalDiv);
         }
+        animalImage.attr("onclick", playGif());
       });
     $("#giphy").empty();
   });
